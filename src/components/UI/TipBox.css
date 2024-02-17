@@ -1,0 +1,28 @@
+.parent{
+    background-color:hsl(183, 100%, 15%) ;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+   
+}
+
+.parent-click{
+    background-color: hsl(172, 67%, 45%);
+    border-color :hsl(172, 67%, 45%) ;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+   
+}
+
+.parent::after{
+    background-color:hsl(172, 67%, 45%) ;
+    border-color :hsl(172, 67%, 45%) ;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+   
+}

@@ -1,0 +1,145 @@
+.container-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: hsl(189, 41%, 97%);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Space Mono';
+    font-weight: 700;
+}
+
+
+
+.container-box-focus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: hsl(189, 41%, 97%);
+    border: 1px solid hsl(172, 67%, 45%);
+    box-sizing: border-box;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    
+
+}
+
+.container-box-person{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: hsl(189, 41%, 97%);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: 'Space Mono';
+    font-weight: 700;
+}
+
+
+
+.container-box-focus-person{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: hsl(189, 41%, 97%);
+    border: 1px solid hsl(172, 67%, 45%);
+    font-family: 'Space Mono';
+    font-weight: 800;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 800px) {
+
+    .container-box-person{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px;
+        background-color: hsl(189, 41%, 97%);
+        margin-top: 10px;
+        font-family: 'Space Mono';
+        font-weight: 700;
+    }
+    
+    
+    
+    .container-box-focus-person{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px;
+        background-color: hsl(189, 41%, 97%);
+        border: 1px solid hsl(172, 67%, 45%);
+        font-family: 'Space Mono';
+        font-weight: 700;
+
+    }
+    
+
+}
+
+
+.container-custom{
+    padding: 10px;
+    margin: 5px;
+    justify-content: space-between;
+    background-color: hsl(189, 41%, 97%);
+    display: flex;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    
+}
+
+.container-custom-focus{
+    padding: 10px;
+    margin: 5px;
+    justify-content: space-between;
+    background-color: hsl(189, 41%, 97%);
+    display: flex;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    border: 1px solid hsl(172, 67%, 45%);
+
+    
+}
+
+
+
+input::placeholder {
+    font: 1.25rem/3 Space Mono;
+}
+
+.container-child{
+    height: 100%;
+    width: 100%;
+   text-align: right;
+   font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    color:hsl(183, 100%, 15%)  ;
+
+
+
+}
+
+.container-child-fo{
+    height: 100%;
+    width: 100%;
+   text-align: right;
+   font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    color:hsl(183, 100%, 15%)  ;
+
+
+
+}
+
+
