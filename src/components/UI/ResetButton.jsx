@@ -28,6 +28,6 @@ export const ResetButton =()=>{
 
     let classes = 'button'
     return (
-        <button onClick={resethandler}  className={`${buttonStatus?'button':'button-disable'}`} >Reset</button>
+        <button onClick={resethandler}  className={`${buttonStatus?'button':'button-disable'}`} >RESET</button>
     )
 }
