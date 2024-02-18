@@ -1,0 +1,45 @@
+name: Tip Calculator
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:      
+       matrix:        
+         node-version: [18.17.0]
+
+    steps:      
+  # Use the node version specified in the strategy    
+      - name: Use Node.js ${{ matrix.node-version }}      
+        uses: actions/setup-node@v4      
+        with:        
+         node-version: ${{ matrix.node-version }}
+     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Git checkout
+        uses: actions/checkout@v4
+
+    # Install packages
+      - name: Install packages
+        run: |
+             yarn install
+    # Build an optimized production build
+      - name: Production build      
+        run: |        
+             unset CI
+             yarn build
+
+      - name: Upload to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read
+        env:
+          SOURCE_DIR: build/
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
